@@ -11,20 +11,25 @@
 
 int main()
 {
-    SetConsoleCP(1251);
+   // SetConsoleCP(1251);// установка кодовой страницы win-cp 1251 в поток // ввода
+    SetConsoleOutputCP(1251); // установка кодовой страницы win-cp 1251 в поток вывода
+   // setlocale(LC_CTYPE, "rus"); // вызов функции настройки локали
+    Class_Neyron neyron[10];
+
    // SetConsoleOutputCP(1251);
 
     std::cout << "Hello World!\n" << std::endl;//<< endl;   
    // new Class_Neyron; 
-   /* int i = 1;
-    for (i; i<5; i++)
+    int i = 0;
+    for (i; i<10; i++)
     {
-        Class_Neyron neyron_i;// создаём объект
+       // Class_Neyron neyron_i;// создаём объект
+        neyron[i].attribute_Imia_Ili_Chislo_Neyrona = i;
     }
-    */
-    Class_Neyron neyron;// создаём объект
+   
+   // Class_Neyron neyron;// создаём объект
     // std::cout << neyron_i.attribute_Imia_Ili_Chislo_Neyrona;
-    std::cout << neyron.attribute_Imia_Ili_Chislo_Neyrona << std::endl;;
+    std::cout <<"Imia_Ili_Chislo_Neyrona это " << neyron[8].attribute_Imia_Ili_Chislo_Neyrona << std::endl;;
 
 
     // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
